@@ -26,3 +26,27 @@ function topFunction() {
 function toWorkExperience() {
   document.getElementById("workd_experience").scrollIntoView();
 }
+
+// *** Toggle Theme ***
+function toggleTheme(e) {
+  if (e.propertyName !== "transform") return;
+
+  if (
+    getComputedStyle(document.body).getPropertyValue("--primaryBgColor") ===
+    "#282828"
+  ) {
+    document.documentElement.style.setProperty(`--primaryBgColor`, "#fff");
+    document.documentElement.style.setProperty(`--secondaryBgColor`, "#e7e7e7");
+    document.documentElement.style.setProperty(`--primaryText`, "#282828");
+    document.documentElement.style.setProperty(`--bodyTextWeight`, "400");
+  } else {
+    document.documentElement.style.setProperty(`--primaryBgColor`, "#282828");
+    document.documentElement.style.setProperty(`--secondaryBgColor`, "#2d2d2d");
+    document.documentElement.style.setProperty(`--primaryText`, "#fff");
+    document.documentElement.style.setProperty(`--bodyTextWeight`, "300");
+  }
+}
+
+const toggleThemeBtn = document.querySelector(`span[class="slider round"]`);
+
+toggleThemeBtn.addEventListener("transitionstart", toggleTheme);

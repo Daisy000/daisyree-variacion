@@ -1,15 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+:root {
+  --primaryBgColor: #282828;
+  --secondaryBgColor: #2d2d2d;
+  --primaryText: #fff;
+  --bodyTextWeight: 300;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  color: #fff;
+  color: var(--primaryText);
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: var(--bodyTextWeight);
   font-style: normal;
-  background-color: #282828;
+  background-color: var(--primaryBgColor);
+  transition: background-color 0.2s;
   padding: 2rem 0px;
 }
 
@@ -28,7 +36,6 @@ body {
   display: flex;
   justify-content: end;
   align-items: center;
-  /* border: 1px solid cyan; */
 }
 
 .header-css nav button:first-child {
@@ -91,7 +98,7 @@ body {
 .hero-contact {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: var(--bodyTextWeight);
   text-align: start;
 }
 
@@ -198,7 +205,7 @@ input:checked + .slider:before {
   display: flex;
   margin-top: 10rem;
   column-gap: 3rem;
-  background-color: #2d2d2d;
+  background-color: var(--secondaryBgColor);
   padding: 10rem 18%;
 }
 
@@ -233,7 +240,7 @@ input:checked + .slider:before {
 
 .work-experience-title {
   font-size: 32px;
-  font-weight: 300;
+  font-weight: var(--bodyTextWeight);
   line-height: 90%;
   text-align: center;
   padding-left: 20px;
@@ -241,7 +248,7 @@ input:checked + .slider:before {
 }
 
 .work-experience-record-container {
-  background-color: #2d2d2d;
+  background-color: var(--secondaryBgColor);
   padding: 3rem 2.5rem;
   margin-bottom: 3rem;
 }
@@ -252,7 +259,7 @@ input:checked + .slider:before {
 
 .work-experience-work-company {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: var(--bodyTextWeight);
   margin: 0px 0px 10px 25px;
 }
 
@@ -273,7 +280,7 @@ input:checked + .slider:before {
   > div:nth-child(2)
   > .work-experience-position {
   font-size: 24px;
-  font-weight: 300;
+  font-weight: var(--bodyTextWeight);
   margin: 0px;
 }
 
@@ -282,7 +289,7 @@ input:checked + .slider:before {
   > div:nth-child(2)
   > .work-experience-duration {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: var(--bodyTextWeight);
 }
 
 .work-experience-summary {
@@ -313,7 +320,7 @@ input:checked + .slider:before {
 }
 .education-title {
   font-size: 32px;
-  font-weight: 300;
+  font-weight: var(--bodyTextWeight);
   line-height: 90%;
   padding-left: 20px;
   border-left: 3px solid #da0037;
@@ -332,13 +339,13 @@ input:checked + .slider:before {
 
 .education-course {
   font-size: 24px;
-  font-weight: 300;
+  font-weight: var(--bodyTextWeight);
   margin: 0px;
 }
 
 .education-university {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: var(--bodyTextWeight);
   margin: 10px 0px 0px 0px;
 }
 
@@ -384,14 +391,14 @@ input:checked + .slider:before {
 }
 
 .btn-text {
-  color: #fff;
+  color: var(--primaryText);
   font-size: 20px;
-  font-weight: 300;
+  font-weight: var(--bodyTextWeight);
   transition: color 0.3s ease-in-out;
 }
 
 .btn-image {
-  background-color: #fff;
+  background-color: var(--primaryText);
   height: 45px;
   width: 45px;
   transition: background-color 0.3s ease-in-out;
