@@ -124,7 +124,7 @@ body {
 }
 
 .secondary-button {
-  color: #fff;
+  color: var(--primaryText);
   background: none;
   border: none;
   outline: inherit;
