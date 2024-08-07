@@ -1,21 +1,18 @@
 // Get the button
 let mybutton = document.getElementById("back_to_top_btn");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction();
-};
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      mybutton.style.opacity = 1;
+    } else {
+      mybutton.style.opacity = 0;
+    }
+  });
+});
 
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 3000 ||
-    document.documentElement.scrollTop > 3000
-  ) {
-    mybutton.style.opacity = 1;
-  } else {
-    mybutton.style.opacity = 0;
-  }
-}
+const footerSection = document.querySelector(".footer-css");
+observer.observe(footerSection);
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
